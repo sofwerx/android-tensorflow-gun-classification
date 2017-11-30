@@ -13,7 +13,7 @@ Assumptions
 
 
 
-## Train and Deploy Ak47 TF Classify App
+## Train and Deploy AK47 TF Classify App
 
 Download repostory
 
