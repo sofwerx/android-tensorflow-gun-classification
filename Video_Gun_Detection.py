@@ -6,10 +6,10 @@
 
 
 # I used this code to perform testing with an airsoftgun ak47 with my computer. 
-# I used this in a docker container that had access.
+# I used this in a docker container that had access to the computer camera.
 # If you have not used open cv2 before, this code may not work.
-# if you would like to know how to make this work on your computer
-# please feel free to comment
+# If you would like to know how to make this work on your computer
+# please feel free to comment for request
 
 
 
