@@ -25,6 +25,8 @@ I used the Galaxy S8 and Galaxy Tab for testing. The Tab was very very slow for 
 
 I used the Fatkun google chrome addin to batched download images [Addin to download images for training](https://www.pcsteps.com/5170-mass-download-images-chrome/). I google searched Ak47, People Farm Tools, and Metal and Would. I had the model classify the other classes so the model would not be confused when the phone camera pointed to people, wood, metal and farm tool object. 
 ## Train and Deploy Ak47 TF Classify App
+
+Download git repository
 ```
 git clone git@github.com:sofwerx/android_tensorflow_gun_detection.git
 ```
@@ -101,7 +103,7 @@ adb install -r $HOME/tf_files/tensorflow_demo.apk
 
 
 
-## additional resource information
+## Additional Resource Information
 
 * [Creating an image classifier on Android using TensorFlow (part 3)](https://medium.com/@daj/creating-an-image-classifier-on-android-using-tensorflow-part-3-215d61cb5fcd)
 * [What is adb](https://developer.android.com/studio/command-line/adb.html#move)
