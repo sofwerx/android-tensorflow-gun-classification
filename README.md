@@ -1,22 +1,22 @@
 # Android Tensorflow Gun Detection
 
-## Description
+### Description
 Identify an AK47 using tensorflow software in an android device. This readme is  instructions to train and deploy tensorflow software to detect an AK47. The name of the folders within the image folder will be the name of the classifcation. This implentation is a proof of concept. Please feel free contribute to the code.
 
 This code can be used to train your own models. All you would need to do is to create new folders in the tf_files/images directory and put the images in the folder. Please label the folder the object name since that is what you will see when the app tries to identify the object. 
 
-## Images
+### Images
 I used the Fatkun google chrome addin to batched download images [addin to download images for training](https://www.pcsteps.com/5170-mass-download-images-chrome/). I google searched Ak47, People, Farm Tools, and Metal and Wood. I created a folder for each object and put the downloaded images to that folder location. I had the model classify the other classes so the model would not be confused when the phone camera was pointed to people, wood, metal, and farm tool objects. 
 
-## Model
+### Model
 I chose to use the inception model for easy integration into the android app. This model also allows for real-time classification on newer android device. If you are installing this app on an old phone or tablet, it is going to be really slow.
 
-## Android Device
+### Android Device
 I used the Galaxy S8 and Galaxy Tab for testing. The Tab was very very slow for object recognition. I had to install adb and verify that adb can see the phone. I followed this link for adb installation [What is adb](https://developer.android.com/studio/command-line/adb.html#move). There are also many articles and youtube videos on how to install adb and detect the device.
 
 
 
-## Assumptions
+### Assumptions
 * docker installed
 * adb installed
 * ubuntu 16.04 lts installed
