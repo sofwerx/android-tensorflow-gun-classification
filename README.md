@@ -17,11 +17,11 @@ Assumptions
 
 Download repostory
 
-'''
+```
 
 git clone git@github.com:sofwerx/android_tensorflow_gun_detection.git
 
-'''
+```
 
 Create a folder named tf_files in home directory. Please copy tf_files folder contents to the tf_files folder created in home directory
 ```
