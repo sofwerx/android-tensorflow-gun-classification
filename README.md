@@ -25,6 +25,7 @@ I used the Galaxy S8 and Galaxy Tab for testing. The Tab was very very slow for 
 
 
 ## Train and Deploy Ak47 TF Classify App
+## Installation
 
 Download git repository
 ```
