@@ -12,7 +12,7 @@ I used the Fatkun google chrome addin to batched download images [addin to downl
 I chose to use the inception model for easy integration into the android app. This model also allows for real-time classification on newer android device. If you are installing this app on an old phone or tablet, it is going to be really slow.
 
 ### Android Device
-I used the Galaxy S8 and Galaxy Tab for testing. The Tab was very very slow for object recognition. I had to install adb and verify that adb can see the phone. I followed this link for adb installation [What is adb](https://developer.android.com/studio/command-line/adb.html#move). There are also many articles and youtube videos on how to install adb and detect the device.
+I used the Galaxy S8 and Galaxy Tab for testing. The Tab was very very slow for object recognition. I also installed adb and verified that adb can detect the phone. I followed this link for adb installation [What is adb](https://developer.android.com/studio/command-line/adb.html#move). There are also many articles and youtube videos on how to install adb and detect the device.
 
 
 
