@@ -23,7 +23,7 @@ I used the Galaxy S8 and Galaxy Tab for testing. The Tab was very very slow for 
 * git installed
 * have android phone
 
-I used the Fatkun google chrome addin to batched download images [Addin to download images for training](https://www.pcsteps.com/5170-mass-download-images-chrome/). I google searched Ak47, People Farm Tools, and Metal and Would. I had the model classify the other classes so the model would not be confused when the phone camera pointed to people, wood, metal and farm tool object. 
+
 ## Train and Deploy Ak47 TF Classify App
 
 Download git repository
