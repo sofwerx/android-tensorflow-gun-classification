@@ -15,7 +15,7 @@ Assumptions
 
 ## Train and Deploy Ak47 TF Classify App
 
-Create a folder to mount to docker container
+Create a folder named tf_files in home directory. Please copy tf_files folder contents to the tf_files folder created in home directory
 ```python
 mkdir $HOME/tf_files
 ```
