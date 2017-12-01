@@ -28,19 +28,15 @@ I used the Galaxy S8 and Galaxy Tab for testing. The Tab was very very slow for 
 ### Installation
 
 Download git repository
-```
-git clone git@github.com:sofwerx/android_tensorflow_gun_detection.git
-```
 
-Create a folder to mount to docker container. This is where docker will find the files for object recognition.
+```git clone git@github.com:sofwerx/android_tensorflow_gun_detection.git $HOME/android_tensorflow_gun_detection
 
 ```
-mkdir $HOME/tf_files
-```
+
 
 Run docker container to train model and build android apk. Note: Need to install Docker [install docker on 16.04 lts](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
 ```
-docker run -it -v $HOME/tf_files:/tf_files danjarvis/tensorflow-android:1.0.0
+docker run -it -v $HOME/android_tensorflow_gun_detection/tf_files:/tf_files danjarvis/tensorflow-android:1.0.0
 ```
 Train inception model for tensorflow tf classifier app
 ```
