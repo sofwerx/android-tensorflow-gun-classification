@@ -9,7 +9,7 @@ This code can be used to train your own models. All you would need to do is to c
 I used the Fatkun google chrome addin to batched download images [addin to download images for training](https://www.pcsteps.com/5170-mass-download-images-chrome/). I google searched Ak47, People, Farm Tools, and Metal and Wood. I created a folder for each object and put the downloaded images to that folder location. I had the model classify the other classes so the model would not be confused when the phone camera was pointed to people, wood, metal, and farm tool objects. 
 
 ### Model
-I chose to use the inception model for easy integration into the android app. This model also allows for real-time classification on newer android device. If you are installing this app on an old phone or tablet, it is going to be really slow.
+I chose to use the inception model for easy integration into the android app. This model also allows for real-time classification on newer android device. If you are installing this app on an old phone or tablet, it is going to be really slow. The model will predict  a gun, people with farm tools, and metal/wood objects. I added these classifications to the model so the gun model would not be confused when pionted at these objects.
 
 ### Android Device
 I used the Galaxy S8 and Galaxy Tab for testing. The Tab was very very slow for object recognition. I also installed adb and verified that adb can detect the phone. I followed this link for adb installation [What is adb](https://developer.android.com/studio/command-line/adb.html#move). There are also many articles and youtube videos on how to install adb and detect the device.
