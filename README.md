@@ -29,7 +29,8 @@ I used the Galaxy S8 and Galaxy Tab for testing. The Tab was very very slow for 
 
 Download git repository
 
-```git clone git@github.com:sofwerx/android_tensorflow_gun_detection.git $HOME/android_tensorflow_gun_detection
+```
+git clone git@github.com:sofwerx/android_tensorflow_gun_detection.git $HOME/android_tensorflow_gun_detection
 
 ```
 
