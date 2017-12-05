@@ -96,7 +96,7 @@ cp /tensorflow/bazel-bin/tensorflow/examples/android/tensorflow_demo.apk /tf_fil
 
 install apk file to android device. This command will need to be run on outside of the docker container terminal Note: need to install adb
 ```
-adb install -r $HOME/tf_files/tensorflow_demo.apk
+adb install -r $$HOME/android_tensorflow_gun_detection/tf_files/tensorflow_demo.apk
 ```
 
 
