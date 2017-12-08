@@ -42,6 +42,13 @@ Use `docker-compose up` to build and run:
 docker-compose up
 ```
 
+Alternatively, if you prefer the `docker` commands instead of `docker-compose`, you can use:
+
+```
+    docker build -t android_tensorflow_gun_detection .
+    docker run --rm -v $PWD/outputs/:/outputs/ android_tensorflow_gun_detection
+```
+
 The `outputs/` folder should now have the APK available for you to install on your phone.
 
 ```
