@@ -1,0 +1,5 @@
+android_tensorflow_gun_detection:
+  build: .
+  volumes:
+    - ./outputs/:/outputs/
+
