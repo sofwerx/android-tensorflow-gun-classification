@@ -1,18 +1,18 @@
 # Android Tensorflow Gun Detection
 
 ### Description
-Identify an AK47 using tensorflow software in an android device. This readme is  instructions to train and deploy tensorflow software to detect an AK47. The name of the folders within the image folder will be the name of the classifcation. This implentation is a proof of concept. Please feel free contribute to the code.
+Identify an AK47 utilizing TensorFlow software in an Android device. This readme contains instructions to train and deploy TensorFlow software to detect an AK47. The images (tf_files>images) are titled by classification. This implementation is a proof of concept. Please feel free to contribute to the code. 
 
-This code can be used to train your own models. All you would need to do is to create new folders in the tf_files/images directory and put the images in the folder. Please label the folder the object name since that is what you will see when the app tries to identify the object. 
+This code can be utilized to train your own models. To do so, create new folders in the tf_files/images directory, title each with the respective object names and place the images in the folders. Please ensure to label the folder with the object name, since this title will correspond with the classification the app will present when attempting to identify an object.  
 
 ### Images
-I used the Fatkun google chrome addin to batched download images [addin to download images for training](https://www.pcsteps.com/5170-mass-download-images-chrome/). I google searched Ak47, People, Farm Tools, and Metal and Wood. I created a folder for each object and put the downloaded images to that folder location. I had the model classify the other classes so the model would not be confused when the phone camera was pointed to people, wood, metal, and farm tool objects. 
+The Fatkun Batch Download Image (Google Chrome extension) was utilized to simultaneously download a bulk of images: [Addin to download images for training](https://www.pcsteps.com/5170-mass-download-images-chrome/). Google searches were completed for ‘AK47’, ‘people’, ‘farm tools’ and ‘metal and wood’. A folder was created for each search category and the downloaded images were placed in the corresponding folder. The model was tasked with classifying the other classes to avoid error and confusion within the model when the phone camera was oriented towards people, wood, metal and farm tool objects. 
 
 ### Model
-I chose to use the inception model for easy integration into the android app. This model also allows for real-time classification on newer android device. If you are installing this app on an old phone or tablet, it is going to be really slow. The model will predict  a gun, people with farm tools, and metal/wood objects. I added these classifications to the model so the gun model would not be confused when pionted at these objects.
+The TensorFlow Inception Model was selected due to its ease of integration into the Android app. The model also enables real-time classification on newer Android devices. If this app is implemented on an older phone or tablet, its operation will be slow. The model will identify a gun, people with farm tools and metal/wood objects. The additional classifications were added to the gun model to eliminate error and confusion when the device camera is oriented towards these objects. 
 
 ### Android Device
-I used the Galaxy S8 and Galaxy Tab for testing. The Tab was very very slow for object recognition. I also installed adb and verified that adb can detect the phone. I followed this link for adb installation [What is adb](https://developer.android.com/studio/command-line/adb.html#move). There are also many articles and youtube videos on how to install adb and detect the device.
+The model was tested on the Galaxy S8 and Galaxy Tab. Object recognition was incredibly slow on the Galaxy Tab. Android Debug Bridge (adb) was installed and verified for detecting the phone. Installation for adb was completed through the following source instruction:  [What is adb](https://developer.android.com/studio/command-line/adb.html#move). Additionally, there are numerous articles and YouTube tutorials available on installing adb and detecting the device. 
 
 
 
