@@ -32,7 +32,7 @@ Download git repository
 
 ```
 git clone https://github.com/sofwerx/android_tensorflow_gun_detection.git $HOME/android_tensorflow_gun_detection
-cd $HOME/android-tensorflow_gun_detection
+cd $HOME/android_tensorflow_gun_detection
 
 ```
 
