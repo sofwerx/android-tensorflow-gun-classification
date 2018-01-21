@@ -31,28 +31,84 @@ The model was tested on the Galaxy S8 and Galaxy Tab. Object recognition was inc
 Download git repository
 
 ```
-git clone https://github.com/sofwerx/android_tensorflow_gun_detection.git $HOME/android_tensorflow_gun_detection
-cd $HOME/android_tensorflow_gun_detection
+git clone git@github.com:sofwerx/android_tensorflow_gun_detection.git $HOME/android_tensorflow_gun_detection
 
 ```
 
-Use `docker-compose up` to build and run:
+Run docker container to train model and build android apk. Note: Need to install Docker install docker on 16.04 lts
 
 ```
-docker-compose up
+docker run -it -v $HOME/android_tensorflow_gun_detection/tf_files:/tf_files danjarvis/tensorflow-android:1.0.0
 ```
 
-Alternatively, if you prefer the `docker` commands instead of `docker-compose`, you can use:
+Train inception model for tensorflow tf classifier app
 
 ```
-    docker build -t android_tensorflow_gun_detection .
-    docker run --rm -v $PWD/outputs/:/outputs/ android_tensorflow_gun_detection
-```
+cd /tensorflow
 
-The `outputs/` folder should now have the APK available for you to install on your phone.
+python tensorflow/examples/image_retraining/retrain.py \
+--bottleneck_dir=/tf_files/bottlenecks \
+--how_many_training_steps 500 \
+--model_dir=/tf_files/inception \
+--output_graph=/tf_files/retrained_graph.pb \
+--output_labels=/tf_files/retrained_labels.txt \
+--image_dir /tf_files/images
+```
+Make sure that the docker container does not run out of memory
 
 ```
-adb install outputs/*debug*.pk
+cd /tensorflow
+
+bazel build --local_resources 4096,4.0,1.0 -j 1 tensorflow/python/tools:strip_unused
+```
+Prepare trained model for android classifer app
+
+```
+bazel-bin/tensorflow/python/tools/strip_unused \
+--input_graph=/tf_files/retrained_graph.pb \
+--output_graph=/tf_files/stripped_retrained_graph.pb \
+--input_node_names="Mul" \
+--output_node_names="final_result" \
+--input_binary=true
+
+```
+Build app for some reason. This step might be skipped
+
+```
+cd /tensorflow
+
+bazel build -c opt --local_resources 4096,4.0,1.0 -j 1 //tensorflow/examples/android:tensorflow_demo
+
+```
+Move labels file, model file, and update parameters in classifier java code
+
+```
+cp /tf_files/retrained_labels.txt /tensorflow/tensorflow/examples/android/assets/retrained_labels.txt
+
+cp /tf_files/stripped_retrained_graph.pb /tensorflow/tensorflow/examples/android/assets/stripped_retrained_graph.pb
+
+cp /tf_files/ClassifierActivityUpdated.java /tensorflow/tensorflow/examples/android/src/org/tensorflow/demo/ClassifierActivity.java
+
+```
+Build new apk with new trained model
+
+```
+cd /tensorflow
+
+bazel build -c opt --local_resources 4096,4.0,1.0 -j 1 //tensorflow/examples/android:tensorflow_demo
+
+```
+Copy apk file from docker container to computer
+
+```
+cp /tensorflow/bazel-bin/tensorflow/examples/android/tensorflow_demo.apk /tf_files
+
+```
+install apk file to android device. This command will need to be run on outside of the docker container terminal Note: need to install adb
+
+```
+adb install -r $HOME/android_tensorflow_gun_detection/tf_files/tensorflow_demo.apk
+
 ```
 
 ## Additional Resource Information
