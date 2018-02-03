@@ -1,4 +1,4 @@
-# Android Tensorflow Gun Classification
+# Android TensorFlow Gun Classification
 
 ### Description
 Identify an AK47 utilizing TensorFlow software in an Android device. This readme contains instructions to train and deploy TensorFlow software to detect an AK47. The images (tf_files>images) are titled by classification. This implementation is a proof of concept. Please feel free to contribute to the code. 
